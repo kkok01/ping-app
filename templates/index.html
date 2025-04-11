@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ping App</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Ping 检测结果</h2>
+    <table>
+        <tr>
+            <th>域名</th><th>IP</th><th>国家</th><th>丢包率</th><th>最小延迟</th><th>平均延迟</th><th>最大延迟</th>
+        </tr>
+        {% for r in results %}
+        <tr>
+            <td>{{ r.domain }}</td><td>{{ r.ip }}</td><td>{{ r.country }}</td><td>{{ r.loss }}</td>
+            <td>{{ r.min }}</td><td>{{ r.avg }}</td><td>{{ r.max }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
