@@ -1,1 +1,3 @@
-flask requests geoip2
+flask
+requests
+geoip2
